@@ -11,7 +11,7 @@ import { MustMatch } from './_helpers/must-match.validator';
 
 export class AppComponent implements OnInit {
     registerForm: FormGroup;
-    submitted = false;
+    registerSubmittedForm = false;
 
     constructor(private formBuilder: FormBuilder) { }
 
@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
     }
 
     onSubmit() {
-        this.submitted = true;
+        this.registerSubmittedForm = true;
 
         // stop here if form is invalid
         if (this.registerForm.invalid) {

@@ -7,34 +7,34 @@
                 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                     <div class="form-group">
                         <label>First Name</label>
-                        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && getRegisterForm.firstName.errors }" />
-                        <div *ngIf="submitted && getRegisterForm.firstName.errors" class="invalid-feedback">
+                        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': registerSubmittedForm && getRegisterForm.firstName.errors }" />
+                        <div *ngIf="registerSubmittedForm && getRegisterForm.firstName.errors" class="invalid-feedback">
                             <div *ngIf="getRegisterForm.firstName.errors.required">First Name is required</div>
                         </div>
 
                         <label>Last Name</label>
-                        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && getRegisterForm.lastName.errors }" />
-                        <div *ngIf="submitted && getRegisterForm.lastName.errors" class="invalid-feedback">
+                        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': registerSubmittedForm && getRegisterForm.lastName.errors }" />
+                        <div *ngIf="registerSubmittedForm && getRegisterForm.lastName.errors" class="invalid-feedback">
                           <div *ngIf="getRegisterForm.lastName.errors.required">Last Name is required</div>
                         </div>
 
                         <label>Email</label>
-                        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && getRegisterForm.email.errors }" />
-                        <div *ngIf="submitted && getRegisterForm.email.errors" class="invalid-feedback">
+                        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': registerSubmittedForm && getRegisterForm.email.errors }" />
+                        <div *ngIf="registerSubmittedForm && getRegisterForm.email.errors" class="invalid-feedback">
                           <div *ngIf="getRegisterForm.email.errors.required">Email is required</div>
                           <div *ngIf="getRegisterForm.email.errors.email">Email must be a valid email address</div>
                         </div>
 
                         <label>Password</label>
-                        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && getRegisterForm.password.errors }" />
-                        <div *ngIf="submitted && getRegisterForm.password.errors" class="invalid-feedback">
+                        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': registerSubmittedForm && getRegisterForm.password.errors }" />
+                        <div *ngIf="registerSubmittedForm && getRegisterForm.password.errors" class="invalid-feedback">
                           <div *ngIf="getRegisterForm.password.errors.required">Password is required</div>
                           <div *ngIf="getRegisterForm.password.errors.minlength">Password must be at least 6 characters</div>
                         </div>
 
                         <label>Confirm Password</label>
-                        <input type="password" formControlName="confirmPassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && getRegisterForm.confirmPassword.errors }" />
-                        <div *ngIf="submitted && getRegisterForm.confirmPassword.errors" class="invalid-feedback">
+                        <input type="password" formControlName="confirmPassword" class="form-control" [ngClass]="{ 'is-invalid': registerSubmittedForm && getRegisterForm.confirmPassword.errors }" />
+                        <div *ngIf="registerSubmittedForm && getRegisterForm.confirmPassword.errors" class="invalid-feedback">
                           <div *ngIf="getRegisterForm.confirmPassword.errors.required">Confirm Password is required</div>
                           <div *ngIf="getRegisterForm.confirmPassword.errors.mustMatch">Passwords must match</div>
                         </div>
