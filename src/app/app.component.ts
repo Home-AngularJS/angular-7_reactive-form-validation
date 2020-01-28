@@ -27,8 +27,10 @@ export class AppComponent implements OnInit {
         });
     }
 
-    // convenience getter for easy access to form fields
-    get f() { return this.registerForm.controls; }
+    // удобство для получения быстрого доступа к полям формы
+    get getRegisterForm() {
+      return this.registerForm.controls;
+    }
 
     onSubmit() {
         this.submitted = true;
